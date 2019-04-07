@@ -10,14 +10,14 @@ $colors: (
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     background-color: map-get($map: $colors, $key: primary );
     width: 100%;
-    height: 200px;
+    height: 33%;
     z-index: -1;
 }
 
 #button{
     background-color: map-get($map: $colors, $key: accent );
     position: absolute;
-    top: 140px;
+    top: 23%;
     right: 15px;
     border-radius: 20%;
     width: 50px;
@@ -33,7 +33,7 @@ $colors: (
 
 #navbar span{
     position: absolute;
-    top: 160px;
+    top: 25%;
     right: 80px;
     a{
         text-decoration: none;
@@ -46,7 +46,7 @@ $colors: (
 
 #menu{
     position: absolute;
-    top: 185px;
+    top: 31%;
     left: 25%;
     width: 100%;
     height: 100px;
@@ -81,16 +81,16 @@ $colors: (
 
     // background-color: map-get($map: $colors, $key: accent );
     width: 100%;
-    height: 200px;
+    height: 33%;
     z-index: 0;
 }
 
 #logo-text{
     position: absolute;
     z-index: 2;
-    top: 15px;
-    margin: auto;
-    text-align: center;
+    top: 1%;
+    margin-right: 10px;
+    text-align: left;
     width: 100%;
     font-family: 'Lobster', cursive;
     font-weight: bold;
@@ -103,21 +103,54 @@ $colors: (
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 50px;
+    top: 5%;
     left: 40%;
     border-radius: 15%;
 }
 
 .slide-show{
     position: absolute;
-    top: 220px;
+    top: 35%;
+    margin-bottom: 15px;
+    display: inline-block;
+    overflow: scroll;
 }
 
 .slide-images{
     height: 300px;
+    display: block;
 }
 
+#footer{
+    position: absolute;
+    top: 80%;
+    height: 20%;
+    display: block;
+    width: 100%;
+    background-color: map-get($map: $colors, $key: accent );
+    margin-top: 15px;
+    font-family: 'ZCOOL XiaoWei', serif;
+    color: beige;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#owner-ph, #team-ph{
+    box-shadow: 5px 5px 5px map-get($map: $colors, $key: primary);
+    margin-bottom: 5px;
+}
+// .footer{
+//     width: 100%;
+//     display: block;
+// }
 
-#test{
-    color: map-get($map: $colors, $key: accent);
+#owner-ph{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+#team-ph{
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
 }
