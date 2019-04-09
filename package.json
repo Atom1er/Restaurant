@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Atom1er/Restaurant#readme",
   "dependencies": {
+    "express": "^4.16.4",
+    "express-server": "^0.7.0",
+    "mysql": "^2.16.0",
+    "nexmo": "^2.4.1",
     "node-sass": "^4.11.0"
   }
 }

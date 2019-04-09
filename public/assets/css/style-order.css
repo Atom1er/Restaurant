@@ -1,0 +1,46 @@
+#menu-div-list {
+  margin: 15px;
+}
+
+#menu-div {
+  background-color: #008340;
+}
+
+#menu-div #place-order-btn {
+  background-color: #ffff3d;
+  color: #008340;
+}
+
+#menu-div:hover {
+  text-decoration: none;
+}
+
+#menu-container {
+  width: 100%;
+}
+
+#menu-container #menu-list {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  height: 65%;
+  display: inline-block;
+  margin: 0;
+}
+
+#menu-container #menu-list ul {
+  background-color: #008340;
+  margin: 0;
+}
+
+#menu-container #menu-list ul li {
+  background-color: #008340;
+  list-style: none;
+  display: block;
+  color: beige;
+}
+
+#menu-container #menu-list ul li:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=style-order.css.map */

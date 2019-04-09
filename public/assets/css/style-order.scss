@@ -1,0 +1,53 @@
+$colors: (
+    primary: #ffff3d,
+    accent: #008340,
+    accentLighten: lighten(#008340, 50%)
+);
+
+#menu-div-list{
+    margin: 15px;
+
+}
+
+#menu-div{
+    background-color: map-get($map: $colors, $key: accent);
+
+    #place-order-btn{
+        background-color: map-get($map: $colors, $key: primary);
+        color: map-get($map: $colors, $key: accent);
+    }
+}
+#menu-div:hover{
+    text-decoration: none;
+}
+
+#menu-container{
+    // margin-left: 0;
+    width: 100%;
+
+#menu-list{
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    height: 65%;
+    display: inline-block;
+    margin: 0;
+    // z-index: 2;
+    ul {
+        background-color: map-get($map: $colors, $key: accent);
+        margin: 0;
+        li{
+        background-color: map-get($map: $colors, $key: accent);
+        list-style: none;
+        // text-align: right;
+        // padding: 15px 15px 5px 0px;
+        display: block;
+        // z-index: 1;
+        color: beige;
+        }
+        li:hover{
+            text-decoration: underline;
+        }
+    }
+}
+}
