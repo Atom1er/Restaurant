@@ -117,13 +117,22 @@
   display: block;
 }
 
+#body {
+  min-height: 100%;
+}
+
 #footer {
   position: absolute;
-  top: 80%;
-  height: 20%;
+  bottom: 0 !important;
+  background-color: #008340;
+  width: 100%;
+}
+
+#footer .row {
+  position: relative;
+  bottom: 0;
   display: block;
   width: 100%;
-  background-color: #008340;
   margin-top: 15px;
   font-family: 'ZCOOL XiaoWei', serif;
   color: beige;
