@@ -36,7 +36,7 @@ module.exports = function (app, menu) {
         const to = '19733426360';
         const text = order;
 
-        // nexmo.message.sendSms(from, to, text);
+        nexmo.message.sendSms(from, to, text);
         res.send("Order Placed! Thank You for Choosing Burkindi Restaurant!");
     })
 }
