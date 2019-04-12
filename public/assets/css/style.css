@@ -158,6 +158,15 @@
   color: white;
 }
 
+#delivery {
+  text-decoration: none;
+  color: white;
+}
+
+#delivery:hover {
+  cursor: pointer;
+}
+
 #carry-out:hover {
   cursor: pointer;
 }

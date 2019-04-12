@@ -8,21 +8,104 @@ $colors: (
     margin: 15px;
 
 }
-
+#place-order-btn{
+    margin: 15px 0 0 50%;
+    background-color: map-get($map: $colors, $key: primary);
+    color: map-get($map: $colors, $key: accent);
+    border-radius: 5px;
+    // align-self: flex-end;
+}
 #menu-div{
     background-color: map-get($map: $colors, $key: accent);
-
-    #place-order-btn{
-        background-color: map-get($map: $colors, $key: primary);
-        color: map-get($map: $colors, $key: accent);
-    }
 }
 #menu-div:hover{
     text-decoration: none;
 }
 
+input[type=checkbox] + label {
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+    }
+
+    input[type=checkbox] {
+    display: none;
+    }
+
+    input[type=checkbox] + label:before {
+    content: "\2714";
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .2s;
+    background-color: map-get($map: $colors, $key: accent);
+    }
+
+    input[type=checkbox] + label:active:before {
+    transform: scale(0);
+    }
+
+    input[type=checkbox]:checked + label:before {
+    background-color: transparent;
+    border-color: map-get($map: $colors, $key: accent);
+    color: #fff; 
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 10px;
+    }
+
+
+
+.side, #place-order-btn{
+    display: none;
+}
+
+li{
+    
+    input[type=checkbox] + label {
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+    }
+
+    input[type=checkbox] {
+    display: none;
+    }
+
+    input[type=checkbox] + label:before {
+    content: "\2714";
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .2s;
+    background-color: map-get($map: $colors, $key: primary);
+    }
+
+    input[type=checkbox] + label:active:before {
+    transform: scale(0);
+    }
+
+    input[type=checkbox]:checked + label:before {
+    background-color: map-get($map: $colors, $key: accent);
+    border-color: map-get($map: $colors, $key: accent);
+    color: #fff; 
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 10px;
+    }
+
+}
 #menu-container{
-    // margin-left: 0;
     width: 100%;
 
 #menu-list{
@@ -32,21 +115,18 @@ $colors: (
     height: 65%;
     display: inline-block;
     margin: 0;
-    // z-index: 2;
     ul {
         background-color: map-get($map: $colors, $key: accent);
         margin: 0;
         li{
         background-color: map-get($map: $colors, $key: accent);
         list-style: none;
-        // text-align: right;
-        // padding: 15px 15px 5px 0px;
         display: block;
-        // z-index: 1;
         color: beige;
         }
         li:hover{
             text-decoration: underline;
+            cursor: pointer;
         }
     }
 }

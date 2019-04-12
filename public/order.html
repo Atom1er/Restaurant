@@ -28,10 +28,8 @@
     <script src="./assets/javascript/order.js" defer></script>
     <!-- CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -52,19 +50,32 @@
         </div>
     </div>
     <div id="menu-container">
-        <div id="menu-list"></div>
+        <div id="menu-list">
+            <div class="col-12" id="plate">
+                <input type="checkbox" name="dibi" value="Dibi"  class="plate" id="dibi"><label class="dibi" for="dibi">DIBI (Lamb)</label>
+                <ul class="side" data-state="hide" id="dibi-side">
+                    <li><input type="checkbox" data-selected="false" name="Salad" value="Salad" id="side-salad"><label class="side-element" for="side-salad">Salad</label></li>
+                    <li><input type="checkbox" data-selected="false" name="Alloco" value="Alloco" id="side-alloco"><label class="side-element" for="side-alloco">Alloco (Plantain)</label></li>
+                    <li><input type="checkbox" data-selected="false" name="Attieke" value="Attieke" id="side-attieke"><label class="side-element" for="side-attieke">Attieke (Kassava)</label></li>
+                    <li><input type="checkbox" data-selected="false" name="Riz-gras" value="Riz-gras" id="side-riz-gras"><label class="side-element" for="side-riz-gras">Riz-gras (Jollof Rice)</label></li>
+                    <li><input type="checkbox" data-selected="false" name="Couscous" value="Couscous" id="side-couscous"><label class="side-element" for="side-couscous">Couscous</label></li>
+                    <li><input type="checkbox" data-selected="false" name="Spaghetti" value="Spaghetti" id="side-spaghetti"><label class="side-element" for="side-spaghetti">Spaghetti</label></li>
+                    <li><input type="checkbox" data-selected="false" name="Waki" value="Waki" id="side-waki"><label class="side-element" for="side-waki">Waki (Beans)</label></li>
+                    <li><input type="checkbox" data-selected="false" name="Riz-sombala" value="Riz-sombala" id="side-riz-sombala"><label class="side-element" for="side-riz-sombala">Riz-soumbala</label></li>
+                </ul>
+                <input type="checkbox" name="rice" value="Rice" class="plate" id="rice"><label class="rice" for="rice">RICE</label>
+                <ul class="side" data-state="hide" id="rice-side">
+                    <li><input type="checkbox" data-selected="false" name="Gombo" value="Gombo" id="side-gombo"><label class="side-element" for="side-gombo">Gombo (fresh Okra)</label></li>
+                    <li><input type="checkbox" data-selected="false" name="Feuille" value="Feuille" id="side-feuille"><label class="side-element" for="side-feuille">Feuille (Spinach)</label></li>
+                    <li><input type="checkbox" data-selected="false" name="Arachide" value="Arachide" id="side-arachide"><label class="side-element" for="side-arachide">Arachide (Peanut Butter Soup)</label></li>
+                    <li><input type="checkbox" data-selected="false" name="Graine" value="Graine" id="side-graine"><label class="side-element" for="side-graine">Graine (Palm Soup)</label></li>
+                </ul>
+                <button id="place-order-btn">Place Order</button>
+            </div>
+        </div>
     </div>
-   
-    <!-- <div class="container-fluid" id="footer">
-        <div class="row d-flex justify-content-between">
-            <div class="col-4 footer-image"><img id="owner-ph" src="./assets/images/owner.PNG"></div>
-            <div class="col-8 footer-image"> <img id="team-ph" src="./assets/images/team.PNG" alt="Burkindi-team"></div>
-        </div>
-        <div class="row d-flex justify-content-between">
-            <div class="col-4 footer-image-title" id="owner-word">Manager</div>
-            <div class="col-8 footer-image-title" id="team-word">Our Team</div>
-        </div>
-    </div> -->
+
+
 </body>
 
 </html>
