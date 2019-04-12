@@ -25,7 +25,7 @@ module.exports = function (app, menu) {
         for (let i = 0; i < meals.length; i++) {
             const element = meals[i];
             const elem = sides[i];
-            order +=  "Meal : "+element+"\n"+"Side : "+elem+"\n";
+            order +=  "\n"+element+"\n"+"Side : "+elem+"\n - - - - - - -\n";
         }
         console.log(order);
         const from = '18032050565';

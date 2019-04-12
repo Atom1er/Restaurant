@@ -29,11 +29,13 @@ $(document).ready(function () {
         var menuList = $("#rice-side");
         var status = $('#rice-side').attr('data-state');
         state(status, menuList);
+        $("#footer").css('display', 'none');
     });
     $('.drinks').on('click', function () {
         var menuList = $("#drinks-side");
         var status = $('#drinks-side').attr('data-state');
         state(status, menuList);
+        $("#footer").css('display', 'none');
     });
 
 
