@@ -28,6 +28,11 @@ $(document).ready(function () {
         var status = $('#rice-side').attr('data-state');
         state(status, menuList);
     });
+    $('.drinks').on('click', function () {
+        var menuList = $("#drinks-side");
+        var status = $('#drinks-side').attr('data-state');
+        state(status, menuList);
+    });
 
 
 

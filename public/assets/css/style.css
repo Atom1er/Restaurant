@@ -9,6 +9,13 @@
   z-index: -1;
 }
 
+.head {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin-top: 75%;
+}
+
 #button {
   background-color: #008340;
   position: absolute;
@@ -109,7 +116,6 @@
   top: 35%;
   margin-bottom: 15px;
   display: inline-block;
-  overflow: scroll;
 }
 
 .slide-images {
@@ -118,18 +124,22 @@
 }
 
 #body {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
   min-height: 100%;
+  min-width: 100%;
 }
 
 #footer {
-  position: absolute;
-  bottom: 0 !important;
+  position: relative;
+  min-width: 100%;
   background-color: #008340;
-  width: 100%;
 }
 
 #footer .row {
-  position: relative;
   bottom: 0;
   display: block;
   width: 100%;

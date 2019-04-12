@@ -107,27 +107,31 @@ li{
 }
 #menu-container{
     width: 100%;
+    position: relative;
 
-#menu-list{
-    position: absolute;
-    top: 35%;
-    width: 100%;
-    height: 65%;
-    display: inline-block;
-    margin: 0;
-    ul {
-        background-color: map-get($map: $colors, $key: accent);
-        margin: 0;
-        li{
-        background-color: map-get($map: $colors, $key: accent);
-        list-style: none;
+    // height: 100%;
+    margin-top: 35px;
+    display: block;
+    #menu-list{
+        position: relative;
+        width: 100%;
+        // height: 65%;
         display: block;
-        color: beige;
-        }
-        li:hover{
-            text-decoration: underline;
-            cursor: pointer;
+        margin: 0;
+        // overflow-y: auto;
+        ul {
+            background-color: map-get($map: $colors, $key: accent);
+            margin: 0;
+            li{
+            background-color: map-get($map: $colors, $key: accent);
+            list-style: none;
+            display: block;
+            color: beige;
+            }
+            li:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
         }
     }
-}
 }
