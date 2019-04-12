@@ -98,6 +98,13 @@ $(document).ready(function () {
         var dibi_valid = true;
         var riz_valid = true;
         var drink = true;
+        var name = $("#name").val();
+        var tel = $("#tel").val();
+        var client = {
+            name: name,
+            tel: tel
+        };
+        console.log(client);
 
         if (plat_dibi.length > 1) {
             var meal0 = plat_dibi[0];
@@ -152,7 +159,10 @@ $(document).ready(function () {
         if (!dibi_valid && !riz_valid && !drink) {
             alert('Please select an accompaniments!')
         }else{
+    
+
             var item = {
+                Client : client,
                 order_1 : dibi_order,
                 order_2 : riz_order,
                 order_3: drink_order

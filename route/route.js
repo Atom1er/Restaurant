@@ -14,14 +14,18 @@ module.exports = function (app, menu) {
         var meals = [];
         var sides = [];
 
-        orders.forEach(element => {
+        for (let i = 1; i < orders.length; i++) {
+            const element = orders[i];
             var m = element[1].meal;
             meals.push(m);
             var s = element[1].side;
             sides.push(s);
-        });
-        console.log("Req: "+orders);
-        var order = "New Order \n";
+        }
+        // orders.forEach(element => {
+           
+        // });
+        console.log("Req: "+orders[0]);
+        var order = "New Order \n\n From:"+orders[0][1].name+"\n ("+orders[0][1].tel+")\n\n";
         for (let i = 0; i < meals.length; i++) {
             const element = meals[i];
             const elem = sides[i];
@@ -32,7 +36,7 @@ module.exports = function (app, menu) {
         const to = '19733426360';
         const text = order;
 
-        nexmo.message.sendSms(from, to, text);
+        // nexmo.message.sendSms(from, to, text);
         res.send("Order Placed! Thank You for Choosing Burkindi Restaurant!");
     })
 }

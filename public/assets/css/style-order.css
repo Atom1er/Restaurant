@@ -146,4 +146,10 @@ li input[type=checkbox]:checked + label:before {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+#user {
+  width: 100%;
+  margin: 0 0 15px 0;
+  height: 150px;
+}
 /*# sourceMappingURL=style-order.css.map */
