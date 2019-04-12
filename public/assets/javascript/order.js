@@ -2,6 +2,7 @@ $(document).ready(function () {
     var order = [];
     var plat_dibi = ["Dibi"];
     var plat_riz = ["Riz"];
+    var drinks = ["Drinks"];
     var plat = [];
 
     function state(state, menu) {
@@ -21,6 +22,7 @@ $(document).ready(function () {
         var menuList = $("#dibi-side");
         var status = $('#dibi-side').attr('data-state');
         state(status, menuList);
+        $("#footer").css('display', 'none');
     });
 
     $('.rice').on('click', function () {
@@ -50,6 +52,9 @@ $(document).ready(function () {
             } else if (plat_name === 'Rice') {
                 plat_riz.push(value);
                 console.log('After Pushing: ' + plat_riz);
+            } else if(plat_name === 'drinks'){
+                drinks.push(value);
+                console.log('Drinks After Pushing '+drinks);
             }
 
             $(this).siblings('input').attr('data-selected', 'true');
@@ -73,6 +78,14 @@ $(document).ready(function () {
                     }
                 }
                 $(this).siblings('input').attr('data-selected', 'false');
+            }else if (plat_name === 'drinks') {
+                for (var i = 0; i < drinks.length; i++) {
+                    if (value === drinks[i]) {
+                        drinks.splice(i, 1);
+                        console.log('After slicing RIZ: ' + drinks);
+                    }
+                }
+                $(this).siblings('input').attr('data-selected', 'false');
             }
         }
     });
@@ -82,6 +95,8 @@ $(document).ready(function () {
     $("#place-order-btn").on('click', function () {
         var dibi_valid = true;
         var riz_valid = true;
+        var drink = true;
+
         if (plat_dibi.length > 1) {
             var meal0 = plat_dibi[0];
             plat_dibi.shift();
@@ -98,6 +113,8 @@ $(document).ready(function () {
         } else{
             dibi_valid = false;
         }
+
+
         if (plat_riz.length > 1) {
             var meal1 = plat_riz[0];
             plat_riz.shift();
@@ -114,13 +131,29 @@ $(document).ready(function () {
             riz_valid = false;
         } 
 
+        if (drinks.length > 1) {
+            var meal1 = drinks[0];
+            drinks.shift();
+            var side1 = "- ";
+            drinks.forEach(element => {
+                side1 += element + " - "
+            });
+            var drink_order = {
+                meal: meal1,
+                side: side1
+            }
+            drink = true;
+        } else{
+            drink = false;
+        } 
 
-        if (!dibi_valid && !riz_valid) {
+        if (!dibi_valid && !riz_valid && !drink) {
             alert('Please select an accompaniments!')
         }else{
             var item = {
                 order_1 : dibi_order,
-                order_2 : riz_order
+                order_2 : riz_order,
+                order_3: drink_order
             }
             // console.log(order);
             orderPlace(item);
@@ -137,6 +170,7 @@ $(document).ready(function () {
           })
             .done(function( msg ) {
               alert(msg);
+              window.location.href = "/";
             });
     }
 });
