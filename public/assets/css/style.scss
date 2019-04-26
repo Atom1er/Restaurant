@@ -1,3 +1,14 @@
+$desktop: 840px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+body{
+  @include desktop{
+    background-color: #008340;
+  }
+}
 #header {
     position: absolute;
     top: 0;
@@ -7,6 +18,9 @@
     width: 100%;
     height: 33%;
     z-index: -1;
+    @include desktop{
+      height: 70%;
+    }
   }
   
   #button {
@@ -18,20 +32,54 @@
     width: 50px;
     height: 50px;
     z-index: 1;
+    @include desktop{
+      display: none;
+    }
   }
   
   #button #img-nav-btn {
     width: 50px;
     height: 50px;
     z-index: 1;
+    @include desktop{
+      display: none;
+    }
   }
   
   #navbar span {
     position: absolute;
     top: 25%;
     right: 80px;
+    @include desktop{
+      top: 65%;
+    }
+
+    #desktop-nav{
+      display: none;
+      color: beige;
+
+      @include desktop{
+        position: absolute;
+        display: inline-block;
+        color: beige;
+      }
+        #order-now-2{
+        @include desktop{
+        display: inline-block;
+        right: 200px;
+        }
+      }
+      #order-now-3{
+        @include desktop{
+        display: inline-block;
+        right: 200px;
+        }
+      }
+    }
   }
   
+ 
+
   #navbar span a {
     text-decoration: none;
     text-transform: uppercase;
@@ -42,17 +90,19 @@
   
   #menu {
     position: absolute;
-    top: 31%;
-    left: 25%;
+    top: 28%;
+    left: 0;
     width: 100%;
     height: 100px;
     display: inline-block;
+    border-radius: 15%;
     z-index: 2;
   }
   
   #menu ul {
     background-color: #008340;
-    width: 80%;
+    width: 100%;
+    transition: 0.3s;
   }
   
   #menu ul li {
@@ -63,10 +113,15 @@
     display: block;
     z-index: 1;
     color: beige;
+    transition-delay: 0.2s;
+    a{
+      color: beige;
+    }
   }
   
   #menu ul li:hover {
     text-decoration: underline;
+    color: beige;
   }
   
   #head-image {
@@ -80,6 +135,9 @@
     width: 100%;
     height: 33%;
     z-index: 0;
+    @include desktop{
+      height: 70%;
+    }
   }
   
   #logo-text {
@@ -110,6 +168,9 @@
     margin-bottom: 15px;
     display: inline-block;
     overflow: scroll;
+    @include desktop{
+      display: none;
+    }
   }
   
   .slide-images {
@@ -130,6 +191,21 @@
     color: beige;
     font-weight: bold;
     text-transform: uppercase;
+    .footer-element{
+      margin-top: 15px;
+      @include desktop{
+        display: none;
+        visibility: hidden;
+      }
+    }
+    @include desktop{
+      height: 50px;
+    }
+  }
+
+  #team-word{
+   margin-left: 15px;
+   margin-bottom: 15px;   
   }
   
   #owner-ph, #team-ph {

@@ -1,0 +1,151 @@
+#body {
+  min-height: 100%;
+}
+
+#menu-div-list {
+  margin: 15px;
+}
+
+#place-order-btn {
+  margin: 15px 0 0 50%;
+  background-color: #ffff3d;
+  color: #008340;
+  border-radius: 5px;
+}
+
+#menu-div {
+  background-color: #008340;
+}
+
+#menu-div:hover {
+  text-decoration: none;
+}
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border-radius: 50%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  vertical-align: bottom;
+  color: transparent;
+  -webkit-transition: .2s;
+  transition: .2s;
+  background-color: #008340;
+}
+
+input[type=checkbox] + label:active:before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: transparent;
+  border-color: #008340;
+  color: #fff;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 10px;
+}
+
+.side, #place-order-btn {
+  display: none;
+}
+
+li input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+li input[type=checkbox] {
+  display: none;
+}
+
+li input[type=checkbox] + label:before {
+  content: "\2714";
+  border-radius: 50%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  vertical-align: bottom;
+  color: transparent;
+  -webkit-transition: .2s;
+  transition: .2s;
+  background-color: #ffff3d;
+}
+
+li input[type=checkbox] + label:active:before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+li input[type=checkbox]:checked + label:before {
+  background-color: #008340;
+  border-color: #008340;
+  color: #fff;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 10px;
+}
+
+#menu-container {
+  width: 100%;
+  position: absolute;
+  padding: 10px 10px 30px 30px;
+  top: 35%;
+  display: block;
+  background-color: #008340;
+}
+
+.menu-img {
+  margin: 10px;
+}
+
+.menu-photo-2 {
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.menu-photo-1 {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+#footer {
+  position: fixed;
+  height: 30px;
+  font-size: small;
+  bottom: 0px;
+  background-color: beige;
+  width: 100%;
+  border-top: 2px solid #008340;
+  border-bottom: 5px solid #008340;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-family: 'ZCOOL XiaoWei', serif;
+  color: #008340;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#user {
+  width: 100%;
+  margin: 0 0 15px 0;
+  height: 150px;
+}
+/*# sourceMappingURL=menu.css.map */

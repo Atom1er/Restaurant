@@ -1,3 +1,9 @@
+@media (min-width: 840px) {
+  body {
+    background-color: #008340;
+  }
+}
+
 #header {
   position: absolute;
   top: 0;
@@ -7,6 +13,12 @@
   width: 100%;
   height: 33%;
   z-index: -1;
+}
+
+@media (min-width: 840px) {
+  #header {
+    height: 70%;
+  }
 }
 
 #button {
@@ -20,16 +32,61 @@
   z-index: 1;
 }
 
+@media (min-width: 840px) {
+  #button {
+    display: none;
+  }
+}
+
 #button #img-nav-btn {
   width: 50px;
   height: 50px;
   z-index: 1;
 }
 
+@media (min-width: 840px) {
+  #button #img-nav-btn {
+    display: none;
+  }
+}
+
 #navbar span {
   position: absolute;
   top: 25%;
   right: 80px;
+}
+
+@media (min-width: 840px) {
+  #navbar span {
+    top: 65%;
+  }
+}
+
+#navbar span #desktop-nav {
+  display: none;
+  color: beige;
+}
+
+@media (min-width: 840px) {
+  #navbar span #desktop-nav {
+    position: absolute;
+    display: inline-block;
+    color: beige;
+  }
+}
+
+@media (min-width: 840px) {
+  #navbar span #desktop-nav #order-now-2 {
+    display: inline-block;
+    right: 200px;
+  }
+}
+
+@media (min-width: 840px) {
+  #navbar span #desktop-nav #order-now-3 {
+    display: inline-block;
+    right: 200px;
+  }
 }
 
 #navbar span a {
@@ -42,17 +99,20 @@
 
 #menu {
   position: absolute;
-  top: 31%;
-  left: 25%;
+  top: 28%;
+  left: 0;
   width: 100%;
   height: 100px;
   display: inline-block;
+  border-radius: 15%;
   z-index: 2;
 }
 
 #menu ul {
   background-color: #008340;
-  width: 80%;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #menu ul li {
@@ -63,10 +123,17 @@
   display: block;
   z-index: 1;
   color: beige;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#menu ul li a {
+  color: beige;
 }
 
 #menu ul li:hover {
   text-decoration: underline;
+  color: beige;
 }
 
 #head-image {
@@ -80,6 +147,12 @@
   width: 100%;
   height: 33%;
   z-index: 0;
+}
+
+@media (min-width: 840px) {
+  #head-image {
+    height: 70%;
+  }
 }
 
 #logo-text {
@@ -112,6 +185,12 @@
   overflow: scroll;
 }
 
+@media (min-width: 840px) {
+  .slide-show {
+    display: none;
+  }
+}
+
 .slide-images {
   height: 300px;
   display: block;
@@ -130,6 +209,28 @@
   color: beige;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+#index-footer .footer-element {
+  margin-top: 15px;
+}
+
+@media (min-width: 840px) {
+  #index-footer .footer-element {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 840px) {
+  #index-footer {
+    height: 50px;
+  }
+}
+
+#team-word {
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
 
 #owner-ph, #team-ph {

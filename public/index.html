@@ -36,27 +36,28 @@
         <div class="container-fluid">
             <div class="container">
                     
-                <div>
+                <div id="top">
                     <div id="header"></div>
                     <nav id="navbar">
                         <span>
                             <a id="order-now" data-toggle="modal" data-target="#modal">Order Now</a>
-                            <a href="#">Menu</a>
+                            <div id="desktop-nav">
+                                <a id="order-now-3">Contact</a>
+                                <a id="order-now-2">Menu</a>
+                            </div>
                         </span>
                         <div id="button"><img id="img-nav-btn" src="./assets/images/rounded-menu-128.png"></div>
                         <div id="menu" data-display="false" style="display:none">
                             <ul>
-                                <li>AFRICAN MENU</li>
-                                <li>ACCOMPANIMENTS</li>
-                                <li>SAUCES</li>
-                                <li>DRINKS</li>
+                                <li><a href="./menu.html">MENU</a></li>
+                                <li><a href="./contact.html">CONTACT US</a></li>
                             </ul>
                         </div>
                     </nav>
                     <div id="head-image"></div>
 
                     <span id="logo-text">American & African Halal Food</span>
-                    <img id="logo" src="./assets/images/logo.png" alt="burkindi-restaurant-logo">
+                     <a href="./index.html"><img id="logo" src="./assets/images/logo.png" alt="burkindi-restaurant-logo"></a> 
 
                 </div>
             </div>
@@ -74,22 +75,16 @@
                         <div class="carousel-item active">
                             <img src="./assets/images/slide-show-1.png" class="d-block w-100 slide-images" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="./assets/images/slide-show-2.png" class="d-block w-100 slide-images" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="./assets/images/slide-show-3.png" class="d-block w-100 slide-images" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                             </div>
                         </div>
                     </div>
@@ -117,15 +112,26 @@
             </div>
         </div> -->
         <div class="container-fluid" id="index-footer">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-4 footer-image"><img id="owner-ph" src="./assets/images/owner.PNG"></div>
-                    <div class="col-8 footer-image"> <img id="team-ph" src="./assets/images/team.PNG" alt="Burkindi-team"></div>
+            <div class="row d-flex justify-content-between footer-element">
+                <div class="col-4 footer-image"><img id="owner-ph" src="./assets/images/owner.PNG"><p>Owner</p></div>
+                <div class="col-8 footer-image"> <img id="team-ph" src="./assets/images/team.PNG" alt="Burkindi-team"><p>Our Team</p></div>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <div class="col-9 footer-image-title" >
+                    <p>Have an Special Inquiries?</p>
+                    <p>
+                        <span>Tel: +1 (973) 732 3310</span>
+                        <span>|</span>
+                        <span> +1 (973) 380 9701</span>
+                    </p>
                 </div>
-                <div class="row d-flex justify-content-between">
-                    <div class="col-4 footer-image-title" id="owner-word">Manager</div>
-                    <div class="col-8 footer-image-title" id="team-word">Our Team</div>
+                
+                <div class="col-3">
+                    <a href="https://www.facebook.com/Burkindis/"> <img width="75px" height="75px" src="./assets/images/facebook.png" alt="facebook"> </a>
+                    <a href="https://www.ubereats.com/en-US/new-jersey/food-delivery/burkindi/4VD7I1uRSQiiLtHU2mwuEQ/"> <img width="75px" height="75px" src="./assets/images/uber.png" alt="Uber"> </a>
                 </div>
             </div>
+        </div>
 
 
         <!-- Modal -->
