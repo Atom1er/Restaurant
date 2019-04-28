@@ -47,7 +47,8 @@
                     <div id="head-image"></div>
 
                     <span id="logo-text">American & African Halal Food</span>
-                    <a href="./index.html"><img id="logo" src="./assets/images/logo.png" alt="burkindi-restaurant-logo"></a>
+                    <a href="./index.html"><img id="logo" src="./assets/images/logo.png"
+                            alt="burkindi-restaurant-logo"></a>
                 </div>
             </div>
         </div>
@@ -55,85 +56,153 @@
 
             <div id="menu-list">
                 <div class="col-12" id="plate">
+
+                    <!-- CLIENT INFOS -->
                     <div class="row" id="user">
                         <ul>
+                            <li>
+                                <label class="user col-4" for="name">Name</label>
+                                <input class="col-8" type="text" name="name" id="name">
+                            </li>
+                            <li>
+                                <label class="user col-4" for="tel">Tel</label>
+                                <input class="col-8" type="text" name="tel" id="tel">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!----------------------------- ORDER ITEMS LEFT  ------------------------------------------------->
+
+                    <div class="row">
+                        <div class="col-6">
+                            <!-- DIBI -->
+                            <input type="checkbox" name="dibi" value="Dibi" class="plate" id="dibi"><label class="dibi"
+                                for="dibi">DIBI (Lamb)</label>
+                            <ul class="side" data-state="hide" id="dibi-side">
+                                <li><input type="checkbox" data-selected="false" name="Salad" value="Salad"
+                                        id="side-salad"><label class="side-element" for="side-salad">Salad</label></li>
+                                <li><input type="checkbox" data-selected="false" name="Alloco" value="Alloco"
+                                        id="side-alloco"><label class="side-element" for="side-alloco">Alloco
+                                        (Plantain)</label>
+                                </li>
+                                <li><input type="checkbox" data-selected="false" name="Attieke" value="Attieke"
+                                        id="side-attieke"><label class="side-element" for="side-attieke">Attieke
+                                        (Kassava)</label></li>
+                                <li><input type="checkbox" data-selected="false" name="Riz-gras" value="Riz-gras"
+                                        id="side-riz-gras"><label class="side-element" for="side-riz-gras">Riz-gras
+                                        (Jollof
+                                        Rice)</label></li>
+                                <li><input type="checkbox" data-selected="false" name="Couscous" value="Couscous"
+                                        id="side-couscous"><label class="side-element"
+                                        for="side-couscous">Couscous</label></li>
+                                <li><input type="checkbox" data-selected="false" name="Spaghetti" value="Spaghetti"
+                                        id="side-spaghetti"><label class="side-element"
+                                        for="side-spaghetti">Spaghetti</label>
+                                </li>
+                                <li><input type="checkbox" data-selected="false" name="Waki" value="Waki"
+                                        id="side-waki"><label class="side-element" for="side-waki">Waki (Beans)</label>
+                                </li>
+                                <li><input type="checkbox" data-selected="false" name="Riz-sombala" value="Riz-sombala"
+                                        id="side-riz-sombala"><label class="side-element"
+                                        for="side-riz-sombala">Riz-soumbala</label></li>
+                            </ul>
+
+                            <!-- RICE -->
+                            <input type="checkbox" name="rice" value="Rice" class="plate" id="rice"><label class="rice"
+                                for="rice">RICE</label>
+                            <ul class="side" data-state="hide" id="rice-side">
+                                <li><input type="checkbox" data-selected="false" name="Gombo" value="Gombo"
+                                        id="side-gombo"><label class="side-element" for="side-gombo">Gombo (fresh
+                                        Okra)</label>
+                                </li>
+                                <li><input type="checkbox" data-selected="false" name="Feuille" value="Feuille"
+                                        id="side-feuille"><label class="side-element" for="side-feuille">Feuille
+                                        (Spinach)</label></li>
+                                <li><input type="checkbox" data-selected="false" name="Arachide" value="Arachide"
+                                        id="side-arachide"><label class="side-element" for="side-arachide">Arachide
+                                        (Peanut
+                                        Butter Soup)</label></li>
+                                <li><input type="checkbox" data-selected="false" name="Graine" value="Graine"
+                                        id="side-graine"><label class="side-element" for="side-graine">Graine (Palm
+                                        Soup)</label></li>
+                            </ul>
+
+                            <!-- DRINKS -->
+                            <input type="checkbox" name="drinks" value="drinks" class="plate" id="drinks">
+                            <label class="drinks" for="drinks">DRINKS</label>
+                            <ul class="side" data-state="hide" id="drinks-side">
                                 <li>
-                                    <label class="user col-4" for="name">Name</label>
-                                    <input class="col-8" type="text" name="name" id="name">
+                                    <input type="checkbox" data-selected="false" name="Gnamakoudji" value="Gnamakoudji"
+                                        id="side-Gnamakoudji">
+                                    <label class="side-element" for="side-Gnamakoudji">Gnamakoudji (100% Natural Ginger
+                                        Juice)</label>
                                 </li>
                                 <li>
-                                    <label class="user col-4" for="tel">Tel</label>
-                                    <input class="col-8" type="text" name="tel" id="tel">
+                                    <input type="checkbox" data-selected="false" name="Bissap" value="Bissap"
+                                        id="side-bissap">
+                                    <label class="side-element" for="side-bissap">Bissap (100% Natural Red Flower of
+                                        Hibiscus
+                                        Juice)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" data-selected="false" name="SODA" value="SODA"
+                                        id="side-soda">
+                                    <label class="side-element" for="side-soda">SODA</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" data-selected="false" name="Water" value="Water"
+                                        id="side-water">
+                                    <label class="side-element" for="side-water">WATER</label>
                                 </li>
                             </ul>
+                        </div>
+
+                        <!----------------------------- ORDER ITEMS RIGHT  ------------------------------------------------->
+
+                        <div class="col-6">
+
+                            <!-- Poissons -->
+                            <input type="checkbox" name="poisson" value="poisson" class="plate" id="poisson"><label class="poisson"
+                                for="poisson">Poisson</label>
+                            <ul class="side" data-state="hide" id="poisson-side">
+                               
+                                <li><input type="checkbox" data-selected="false" name="Salad" value="Salad"
+                                        id="side-poisson-salad"><label class="side-element" for="side-poisson-salad">Salad</label></li>
+                                <li><input type="checkbox" data-selected="false" name="Alloco" value="Alloco"
+                                        id="side-poisson-alloco"><label class="side-element" for="side-poisson-alloco">Alloco
+                                        (Plantain)</label>
+                                </li>
+                                <li><input type="checkbox" data-selected="false" name="Attieke" value="Attieke"
+                                        id="side-poisson-attieke"><label class="side-element" for="side-poisson-attieke">Attieke
+                                        (Kassava)</label></li>
+                                <li><input type="checkbox" data-selected="false" name="Riz-gras" value="Riz-gras"
+                                        id="side-poisson-riz-gras"><label class="side-element" for="side-poisson-riz-gras">Riz-gras
+                                        (Jollof
+                                        Rice)</label></li>
+
+                                <li><input type="checkbox" data-selected="false" name="Haricot" value="Haricot"
+                                        id="side-Haricot"><label class="side-element" for="side-Haricot">Haricot (Beans)</label>
+                                </li>
+                            </ul>
+
+                            <!-- Tô -->
+                            <input type="checkbox" name="Tô" value="Tô" class="plate" id="Tô"><label class="Tô"
+                                for="Tô">Tô</label>
+                            <ul class="side" data-state="hide" id="Tô-side">
+                                <li><input type="checkbox" data-selected="false" name="Gombo" value="Gombo"
+                                        id="side-Tô-gombo"><label class="side-element" for="side-Tô-gombo">Gombo (fresh
+                                        Okra)</label>
+                                </li>
+                                <li><input type="checkbox" data-selected="false" name="Oseign" value="Oseign"
+                                        id="side-oseign"><label class="side-element" for="side-oseign">Oseign
+                                        </label></li>
+                                <li><input type="checkbox" data-selected="false" name="Babenda" value="Babenda"
+                                        id="side-Babenda"><label class="side-element" for="side-Babenda">Babenda
+                                        </label></li>
+                            </ul>
+                        </div>
                     </div>
-                    <input type="checkbox" name="dibi" value="Dibi" class="plate" id="dibi"><label class="dibi"
-                        for="dibi">DIBI (Lamb)</label>
-                    <ul class="side" data-state="hide" id="dibi-side">
-                        <li><input type="checkbox" data-selected="false" name="Salad" value="Salad"
-                                id="side-salad"><label class="side-element" for="side-salad">Salad</label></li>
-                        <li><input type="checkbox" data-selected="false" name="Alloco" value="Alloco"
-                                id="side-alloco"><label class="side-element" for="side-alloco">Alloco (Plantain)</label>
-                        </li>
-                        <li><input type="checkbox" data-selected="false" name="Attieke" value="Attieke"
-                                id="side-attieke"><label class="side-element" for="side-attieke">Attieke
-                                (Kassava)</label></li>
-                        <li><input type="checkbox" data-selected="false" name="Riz-gras" value="Riz-gras"
-                                id="side-riz-gras"><label class="side-element" for="side-riz-gras">Riz-gras (Jollof
-                                Rice)</label></li>
-                        <li><input type="checkbox" data-selected="false" name="Couscous" value="Couscous"
-                                id="side-couscous"><label class="side-element" for="side-couscous">Couscous</label></li>
-                        <li><input type="checkbox" data-selected="false" name="Spaghetti" value="Spaghetti"
-                                id="side-spaghetti"><label class="side-element" for="side-spaghetti">Spaghetti</label>
-                        </li>
-                        <li><input type="checkbox" data-selected="false" name="Waki" value="Waki" id="side-waki"><label
-                                class="side-element" for="side-waki">Waki (Beans)</label></li>
-                        <li><input type="checkbox" data-selected="false" name="Riz-sombala" value="Riz-sombala"
-                                id="side-riz-sombala"><label class="side-element"
-                                for="side-riz-sombala">Riz-soumbala</label></li>
-                    </ul>
-
-                    <input type="checkbox" name="rice" value="Rice" class="plate" id="rice"><label class="rice"
-                        for="rice">RICE</label>
-                    <ul class="side" data-state="hide" id="rice-side">
-                        <li><input type="checkbox" data-selected="false" name="Gombo" value="Gombo"
-                                id="side-gombo"><label class="side-element" for="side-gombo">Gombo (fresh Okra)</label>
-                        </li>
-                        <li><input type="checkbox" data-selected="false" name="Feuille" value="Feuille"
-                                id="side-feuille"><label class="side-element" for="side-feuille">Feuille
-                                (Spinach)</label></li>
-                        <li><input type="checkbox" data-selected="false" name="Arachide" value="Arachide"
-                                id="side-arachide"><label class="side-element" for="side-arachide">Arachide (Peanut
-                                Butter Soup)</label></li>
-                        <li><input type="checkbox" data-selected="false" name="Graine" value="Graine"
-                                id="side-graine"><label class="side-element" for="side-graine">Graine (Palm
-                                Soup)</label></li>
-                    </ul>
-
-                    <input type="checkbox" name="drinks" value="drinks" class="plate" id="drinks">
-                    <label class="drinks" for="drinks">DRINKS</label>
-                    <ul class="side" data-state="hide" id="drinks-side">
-                        <li>
-                            <input type="checkbox" data-selected="false" name="Gnamakoudji" value="Gnamakoudji"
-                                id="side-Gnamakoudji">
-                            <label class="side-element" for="side-Gnamakoudji">Gnamakoudji (100% Natural Ginger
-                                Juice)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" data-selected="false" name="Bissap" value="Bissap" id="side-bissap">
-                            <label class="side-element" for="side-bissap">Bissap (100% Natural Red Flower of Hibiscus
-                                Juice)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" data-selected="false" name="SODA" value="SODA" id="side-soda">
-                            <label class="side-element" for="side-soda">SODA</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" data-selected="false" name="Water" value="Water" id="side-water">
-                            <label class="side-element" for="side-water">WATER</label>
-                        </li>
-                    </ul>
-
+                    <!-- ORDER BUTTON -->
                     <button id="place-order-btn">Place Order</button>
                 </div>
             </div>
