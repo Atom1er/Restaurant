@@ -1,3 +1,11 @@
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
 $colors: (
     primary: #ffff3d,
     accent: #008340,
@@ -107,6 +115,46 @@ li{
     }
 
 }
+#navbar span {
+    position: absolute;
+    top: 25%;
+    right: 80px;
+    z-index: 2;
+    @include desktop{
+      top: 25%;
+      z-index: 1;
+    }
+
+    #desktop-nav{
+      // position: absolute;
+      display: none;
+      color: beige;
+      z-index: 2;
+
+      @include desktop{
+        position: absolute;
+        top: 0;
+        right: 175px;
+        width: 100px;
+        display: inline-block;
+        color: beige;
+        z-index: 2;
+      }
+        #order-now-2{
+        @include desktop{
+        display: inline-block;
+        // right: 200px;
+        }
+      }
+      #order-now-3{
+        @include desktop{
+        display: inline-block;
+        // right: 200px;
+        }
+      }
+    }
+  }
+  
 #menu-container{
     width: 100%;
     position: absolute;
@@ -114,6 +162,30 @@ li{
     top: 35%;
     display: block;
     background-color: #008340;
+    .menu-part-top{
+        @include desktop{
+            display: inline-block;
+            margin-left: 15%;
+        }
+        .menu-part-1{
+            @include desktop{
+                display: inline-flex;
+                margin: 25px 25px 15px 25px;
+            }
+        }
+    }
+    .menu-part-bottom{
+        @include desktop{
+            display: inline-block;
+            margin-left: 15%;
+        }
+        .menu-part-2{
+            @include desktop{
+                display: inline-flex;
+                margin: 25px 25px 15px 25px;
+            }
+        }
+    }
 }
 
 .menu-img{
@@ -125,6 +197,38 @@ li{
 .menu-photo-1{
     transform: rotate(10deg);
 }
+
+#header {
+    position: absolute;
+    top: 0;
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background-color: #ffff3d;
+    width: 100%;
+    height: 33%;
+    z-index: -1;
+
+    @include desktop{
+      height: 35%;
+      width: 100%;
+    }
+  }
+
+  #head-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
+            clip-path: polygon(100% 0, 0% 100%, 0 0);
+    background-image: url("../images/head.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 33%;
+    z-index: 0;
+    @include desktop{
+      height: 35%;
+    }
+  }
 
 #footer {
     position: fixed;
@@ -142,13 +246,3 @@ li{
     font-weight: bold;
     text-transform: uppercase;
   }
-
-  #user{
-    width: 100%;
-    margin: 0 0 15px 0;
-    height:150px;
-  }
-//   .user{
-//       margin-bottom: 10px;
-      
-//   }

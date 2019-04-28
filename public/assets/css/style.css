@@ -1,7 +1,5 @@
-@media (min-width: 840px) {
-  body {
-    background-color: #008340;
-  }
+body {
+  background-color: #008340;
 }
 
 #header {
@@ -17,7 +15,8 @@
 
 @media (min-width: 840px) {
   #header {
-    height: 70%;
+    height: 35%;
+    width: 100%;
   }
 }
 
@@ -58,7 +57,7 @@
 
 @media (min-width: 840px) {
   #navbar span {
-    top: 65%;
+    top: 25%;
   }
 }
 
@@ -70,22 +69,24 @@
 @media (min-width: 840px) {
   #navbar span #desktop-nav {
     position: absolute;
+    top: 0;
+    right: 75px;
+    width: 200px;
     display: inline-block;
     color: beige;
+    z-index: 2;
   }
 }
 
 @media (min-width: 840px) {
   #navbar span #desktop-nav #order-now-2 {
     display: inline-block;
-    right: 200px;
   }
 }
 
 @media (min-width: 840px) {
   #navbar span #desktop-nav #order-now-3 {
     display: inline-block;
-    right: 200px;
   }
 }
 
@@ -99,7 +100,7 @@
 
 #menu {
   position: absolute;
-  top: 28%;
+  top: 30%;
   left: 0;
   width: 100%;
   height: 100px;
@@ -151,7 +152,7 @@
 
 @media (min-width: 840px) {
   #head-image {
-    height: 70%;
+    height: 35%;
   }
 }
 
@@ -175,6 +176,110 @@
   top: 5%;
   left: 40%;
   border-radius: 15%;
+}
+
+@media (min-width: 840px) {
+  #logo {
+    top: 10%;
+    width: 175px;
+    height: 175px;
+    border: #008340 5px solid;
+  }
+}
+
+#desktop-intro {
+  display: none;
+}
+
+@media (min-width: 840px) {
+  #desktop-intro {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    top: 45%;
+    left: 15%;
+    width: 70%;
+    text-align: justify;
+  }
+  #desktop-intro .desktop-intro-img {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 15px;
+  }
+  #desktop-intro .desktop-intro-text {
+    display: inline-block;
+    font-family: 'ZCOOL XiaoWei', serif;
+    color: beige;
+    width: 70%;
+    font-size: larger;
+  }
+}
+
+#desktop-slide {
+  display: none;
+}
+
+@media (min-width: 840px) {
+  #desktop-slide {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    position: absolute;
+    top: 72%;
+    z-index: 2;
+    /* Move it (define the animation) */
+  }
+  #desktop-slide .scroll-left {
+    height: 100%;
+  }
+  #desktop-slide .scroll-left .inner {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    margin: 0;
+    line-height: 100%;
+    /* Starting position */
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    /* Apply animation to this element */
+    -webkit-animation: scroll-left 15s linear infinite;
+    animation: scroll-left 15s linear infinite;
+  }
+  #desktop-slide .scroll-left .inner .desktop-slide-img {
+    display: inline-block;
+    width: 200px;
+    height: 135px;
+    padding-right: 35px;
+  }
+  #desktop-slide .scroll-left .inner-1 {
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
+  @-webkit-keyframes scroll-left {
+    0% {
+      -webkit-transform: translateX(100%);
+    }
+    100% {
+      -webkit-transform: translateX(-100%);
+    }
+  }
+  @keyframes scroll-left {
+    0% {
+      /* Browser bug fix */
+      -webkit-transform: translateX(100%);
+      /* Browser bug fix */
+      transform: translateX(100%);
+    }
+    100% {
+      /* Browser bug fix */
+      -webkit-transform: translateX(-100%);
+      /* Browser bug fix */
+      transform: translateX(-100%);
+    }
+  }
 }
 
 .slide-show {
@@ -209,6 +314,12 @@
   color: beige;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+@media (min-width: 840px) {
+  #index-footer {
+    background-color: transparent;
+  }
 }
 
 #index-footer .footer-element {
@@ -253,6 +364,12 @@
 
 #order-now {
   cursor: pointer;
+}
+
+@media (min-width: 840px) {
+  #order-now {
+    display: inline-block;
+  }
 }
 
 #carry-out {

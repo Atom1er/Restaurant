@@ -124,7 +124,7 @@ li{
 }
 
 #footer {
-    position: absolute;
+    position: fixed;
     height: 30px;
     font-size: small;
     bottom: 0;
@@ -138,6 +138,8 @@ li{
     color: #008340;
     font-weight: bold;
     text-transform: uppercase;
+    align-content: center;
+    text-align: center;
   }
 
   #user{

@@ -1,5 +1,6 @@
 #body {
   min-height: 100%;
+  background-color: beige;
 }
 
 #menu-div-list {
@@ -108,6 +109,7 @@ li input[type=checkbox]:checked + label:before {
   position: absolute;
   top: 35%;
   display: block;
+  background-color: beige;
 }
 
 #menu-container #menu-list {
@@ -135,16 +137,17 @@ li input[type=checkbox]:checked + label:before {
 }
 
 #footer {
-  position: absolute;
+  position: fixed;
   height: 50px;
   font-size: small;
   bottom: 0;
   width: 100%;
-  background-color: #008340;
+  background-color: beige;
   font-family: 'ZCOOL XiaoWei', serif;
-  color: beige;
+  color: #008340;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
 
 #user {

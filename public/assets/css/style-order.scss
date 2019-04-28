@@ -3,8 +3,12 @@ $colors: (
     accent: #008340,
     accentLighten: lighten(#008340, 50%)
 );
+
+
+
 #body{
     min-height: 100%;
+    background-color: beige
 }
 #menu-div-list{
     margin: 15px;
@@ -112,6 +116,7 @@ li{
     position: absolute;
     top: 35%;
     display: block;
+    background-color: beige;
     #menu-list{
         position: relative;
         width: 100%;
@@ -138,18 +143,19 @@ li{
 
   
 #footer {
-    position: absolute;
+    position: fixed;
     height: 50px;
     font-size: small;
     bottom: 0;
     // display: block;
     width: 100%;
-    background-color: #008340;
+    background-color: beige;
     // margin-top: 15px;
     font-family: 'ZCOOL XiaoWei', serif;
-    color: beige;
+    color:#008340;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
   }
 
   #user{

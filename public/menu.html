@@ -23,8 +23,8 @@
         crossorigin="anonymous"></script>
     <!-- End Bootstrap -->
     <!-- Local -->
-    <link rel="stylesheet" href="./assets/css/menu.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
     <script src="./assets/javascript/order.js" defer></script>
     <!-- CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
@@ -42,7 +42,10 @@
                     <nav id="navbar">
                         <span>
                             <a href="./index.html">Home</a>
-                            <a href="./order.html">Order Now</a>
+                            <a id="order-now" data-toggle="modal" data-target="#modal">Order Now</a>
+                            <div id="desktop-nav">
+                                <a href="./menu.html" id="order-now-1">Menu</a>
+                            </div>
                         </span>
                     </nav>
                     <div id="head-image"></div>
@@ -53,21 +56,25 @@
             </div>
         </div>
         <div id="menu-container">
-            <div class="row">
-                <img width="150vw" height="150px" class="menu-img menu-photo-1" src="./assets/images/dibi.PNG" alt="Dibi">
-                <img width="150vw" height="150px" class="menu-img" src="./assets/images/dibi-price.PNG" alt="Dibi-Price">
+            <div class="menu-part-top">
+                <div class="row menu-part-1">
+                    <img width="150vw" height="150px" class="menu-img menu-photo-1" src="./assets/images/dibi.PNG" alt="Dibi">
+                    <img width="150vw" height="150px" class="menu-img" src="./assets/images/dibi-price.PNG" alt="Dibi-Price">
+                </div>
+                <div class="row menu-part-1">
+                    <img width="150vw" height="150px" class="menu-img" src="./assets/images/rice-price.PNG" alt="rice-price">
+                    <img width="150vw" height="150px" class="menu-img menu-photo-2" src="./assets/images/rice.PNG" alt="Rice">
+                </div>
             </div>
-            <div class="row">
-                <img width="150vw" height="150px" class="menu-img" src="./assets/images/rice-price.PNG" alt="rice-price">
-                <img width="150vw" height="150px" class="menu-img menu-photo-2" src="./assets/images/rice.PNG" alt="Rice">
-            </div>
-            <div class="row">
-                <img width="150vw" height="150px" class="menu-img menu-photo-1" src="./assets/images/poisson.PNG" alt="poisson">
-                <img width="150vw" height="150px" class="menu-img" src="./assets/images/poisson-price.PNG" alt="poisson-price">
-            </div>
-            <div class="row">
-                <img width="150vw" height="150px" class="menu-img" src="./assets/images/fufu-babemda-price.PNG" alt="fufu-babemda-price">
-                <img width="150vw" height="150px" class="menu-img menu-photo-2" src="./assets/images/fufu-babemda.PNG" alt="fufu-babemda">
+            <div class="menu-part-bottom">
+                <div class="row menu-part-2">
+                    <img width="150vw" height="150px" class="menu-img menu-photo-1" src="./assets/images/poisson.PNG" alt="poisson">
+                    <img width="150vw" height="150px" class="menu-img" src="./assets/images/poisson-price.PNG" alt="poisson-price">
+                </div>
+                <div class="row menu-part-2">
+                    <img width="150vw" height="150px" class="menu-img" src="./assets/images/fufu-babemda-price.PNG" alt="fufu-babemda-price">
+                    <img width="150vw" height="150px" class="menu-img menu-photo-2" src="./assets/images/fufu-babemda.PNG" alt="fufu-babemda">
+                </div>
             </div>
         </div>
 
@@ -75,6 +82,46 @@
             <span> Burkindi Restaurant &copy; 2019 | By Thomas Minoungou</span>
         </div>
     </div>
+     <!-- Modal -->
+     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">How Would You like to Place Your Order:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <div class="row">
+                            <div class="col-6  d-flex justify-content-center">
+                                <button type="button" class="btn btn-warning">
+                                    <a id="delivery"
+                                        href="https://www.ubereats.com/en-US/new-jersey/food-delivery/burkindi/4VD7I1uRSQiiLtHU2mwuEQ/"
+                                        target="_blank">
+                                        <img src="./assets/images/delivery.png" width="50px" height="40px"
+                                            alt="Delivery">
+                                        <span>Delivery</span>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center">
+                                <button type="button" class="btn btn-success">
+                                    <a id="carry-out" href="./order.html">
+                                        <img src="./assets/images/carry-out.png" width="50px" height="40px"
+                                            alt="Carry-Out">
+                                        <span>Carry-Out</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
