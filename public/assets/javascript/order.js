@@ -4,7 +4,7 @@ $(document).ready(function () {
     var plat_riz = ["Riz"];
     var drinks = ["Drinks"];
     var poisson = ["Poisson"];
-    var To = ["Tô"];
+    var To = ["To"];
 
     function state(state, menu) {
 
@@ -46,15 +46,10 @@ $(document).ready(function () {
         state(status, menuList);
         $("#footer").css('display', 'none');
     });
-    $('.drinks').on('click', function () {
-        var menuList = $("#drinks-side");
-        var status = $('#drinks-side').attr('data-state');
-        state(status, menuList);
-        $("#footer").css('display', 'none');
-    });
-    $('.Tô').on('click', function () {
-        var menuList = $("#Tô-side");
-        var status = $('#Tô-side').attr('data-state');
+
+    $('.To').on('click', function () {
+        var menuList = $("#To-side");
+        var status = $('#To-side').attr('data-state');
         state(status, menuList);
         $("#footer").css('display', 'none');
     });
@@ -81,7 +76,7 @@ $(document).ready(function () {
             }else if(plat_name === 'poisson'){
                 poisson.push(value);
                 console.log('Poisson After Pushing '+poisson);
-            }else if(plat_name === 'Tô'){
+            }else if(plat_name === 'To'){
                 To.push(value);
                 console.log('Poisson After Pushing '+To);
             }
@@ -123,7 +118,7 @@ $(document).ready(function () {
                     }
                 }
                 $(this).siblings('input').attr('data-selected', 'false');
-            }else if (plat_name === 'Tô') {
+            }else if (plat_name === 'To') {
                 for (var i = 0; i < To.length; i++) {
                     if (value === To[i]) {
                         To.splice(i, 1);
