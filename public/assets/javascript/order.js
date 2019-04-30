@@ -4,7 +4,7 @@ $(document).ready(function () {
     var plat_riz = ["Riz"];
     var drinks = ["Drinks"];
     var poisson = ["Poisson"];
-    var plat = [];
+    var To = ["Tô"];
 
     function state(state, menu) {
 
@@ -52,6 +52,12 @@ $(document).ready(function () {
         state(status, menuList);
         $("#footer").css('display', 'none');
     });
+    $('.Tô').on('click', function () {
+        var menuList = $("#Tô-side");
+        var status = $('#Tô-side').attr('data-state');
+        state(status, menuList);
+        $("#footer").css('display', 'none');
+    });
 
 
 
@@ -75,6 +81,9 @@ $(document).ready(function () {
             }else if(plat_name === 'poisson'){
                 poisson.push(value);
                 console.log('Poisson After Pushing '+poisson);
+            }else if(plat_name === 'Tô'){
+                To.push(value);
+                console.log('Poisson After Pushing '+To);
             }
 
             $(this).siblings('input').attr('data-selected', 'true');
@@ -114,6 +123,14 @@ $(document).ready(function () {
                     }
                 }
                 $(this).siblings('input').attr('data-selected', 'false');
+            }else if (plat_name === 'Tô') {
+                for (var i = 0; i < To.length; i++) {
+                    if (value === To[i]) {
+                        To.splice(i, 1);
+                        console.log('After slicing Poisson: ' + To);
+                    }
+                }
+                $(this).siblings('input').attr('data-selected', 'false');
             }
         }
     });
@@ -125,6 +142,7 @@ $(document).ready(function () {
         var riz_valid = true;
         var drink = true;
         var poisson_valide = true;
+        var To_valide = true;
         var name = $("#name").val();
         var tel = $("#tel").val();
         var client = {
@@ -199,10 +217,26 @@ $(document).ready(function () {
             poisson_valide = true;
         } else{
             poisson_valide = false;
-        } 
+        }
 
+        if (To.length > 1) {
+            var meal4 = To[0];
+            To.shift();
+            var side1 = "- ";
+            console.log(To);
+            To.forEach(element => {
+                side1 += element + " - "
+            });
+            var To_order = {
+                meal: meal4,
+                side: side1
+            }
+            To_valide = true;
+        } else{
+            To_valide = false;
+        }
 
-        if (!dibi_valid && !riz_valid && !drink && !poisson_valide) {
+        if (!dibi_valid && !riz_valid && !drink && !poisson_valide && !To_valide) {
             alert('Please select an accompaniments!')
         }else{
     
@@ -211,7 +245,8 @@ $(document).ready(function () {
                 order_1 : dibi_order,
                 order_2 : riz_order,
                 order_3: drink_order,
-                order_4: poisson_order
+                order_4: poisson_order,
+                order_5: To_order
             }
             console.log(item);
             orderPlace(item);
