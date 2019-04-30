@@ -11,9 +11,11 @@ $colors: (
     accent: #008340,
     accentLighten: lighten(#008340, 50%)
 );
+
 #body{
     min-height: 100%;
 }
+
 #menu-div-list{
     margin: 15px;
 
@@ -245,4 +247,5 @@ li{
     color: #008340;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
   }

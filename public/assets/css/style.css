@@ -214,6 +214,9 @@ body {
     width: 70%;
     font-size: larger;
   }
+  #desktop-intro .desktop-intro-text a {
+    color: beige;
+  }
 }
 
 #desktop-slide {

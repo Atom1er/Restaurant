@@ -3,6 +3,7 @@ $(document).ready(function () {
     var plat_dibi = ["Dibi"];
     var plat_riz = ["Riz"];
     var drinks = ["Drinks"];
+    var poisson = ["Poisson"];
     var plat = [];
 
     function state(state, menu) {
@@ -39,6 +40,20 @@ $(document).ready(function () {
     });
 
 
+    $('.poisson').on('click', function () {
+        var menuList = $("#poisson-side");
+        var status = $('#poisson-side').attr('data-state');
+        state(status, menuList);
+        $("#footer").css('display', 'none');
+    });
+    $('.drinks').on('click', function () {
+        var menuList = $("#drinks-side");
+        var status = $('#drinks-side').attr('data-state');
+        state(status, menuList);
+        $("#footer").css('display', 'none');
+    });
+
+
 
     $(".side-element").on('click', function () {
         var value = $(this).siblings('input').attr('value');
@@ -57,6 +72,9 @@ $(document).ready(function () {
             } else if(plat_name === 'drinks'){
                 drinks.push(value);
                 console.log('Drinks After Pushing '+drinks);
+            }else if(plat_name === 'poisson'){
+                poisson.push(value);
+                console.log('Poisson After Pushing '+poisson);
             }
 
             $(this).siblings('input').attr('data-selected', 'true');
@@ -88,6 +106,14 @@ $(document).ready(function () {
                     }
                 }
                 $(this).siblings('input').attr('data-selected', 'false');
+            }else if (plat_name === 'poisson') {
+                for (var i = 0; i < poisson.length; i++) {
+                    if (value === poisson[i]) {
+                        poisson.splice(i, 1);
+                        console.log('After slicing Poisson: ' + poisson);
+                    }
+                }
+                $(this).siblings('input').attr('data-selected', 'false');
             }
         }
     });
@@ -98,6 +124,7 @@ $(document).ready(function () {
         var dibi_valid = true;
         var riz_valid = true;
         var drink = true;
+        var poisson_valide = true;
         var name = $("#name").val();
         var tel = $("#tel").val();
         var client = {
@@ -156,18 +183,37 @@ $(document).ready(function () {
             drink = false;
         } 
 
-        if (!dibi_valid && !riz_valid && !drink) {
+
+        if (poisson.length > 1) {
+            var meal4 = poisson[0];
+            poisson.shift();
+            var side1 = "- ";
+            console.log(poisson);
+            poisson.forEach(element => {
+                side1 += element + " - "
+            });
+            var poisson_order = {
+                meal: meal4,
+                side: side1
+            }
+            poisson_valide = true;
+        } else{
+            poisson_valide = false;
+        } 
+
+
+        if (!dibi_valid && !riz_valid && !drink && !poisson_valide) {
             alert('Please select an accompaniments!')
         }else{
     
-
             var item = {
                 Client : client,
                 order_1 : dibi_order,
                 order_2 : riz_order,
-                order_3: drink_order
+                order_3: drink_order,
+                order_4: poisson_order
             }
-            // console.log(order);
+            console.log(item);
             orderPlace(item);
         }
 

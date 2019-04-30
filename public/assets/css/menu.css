@@ -254,5 +254,6 @@ li input[type=checkbox]:checked + label:before {
   color: #008340;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
 /*# sourceMappingURL=menu.css.map */
